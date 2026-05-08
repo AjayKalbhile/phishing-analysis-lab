@@ -1,0 +1,63 @@
+name: Test Analysis Tools
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r lab-setup/requirements.txt
+
+    - name: Test header_analyzer.py
+      run: |
+        python3 tools/header_analyzer.py samples/urgent_invoice.eml
+        echo "✓ header_analyzer passed"
+
+    - name: Test ioc_parser.py
+      run: |
+        python3 tools/ioc_parser.py samples/urgent_invoice.eml --format json
+        echo "✓ ioc_parser passed"
+
+    - name: Test url_extractor.py
+      run: |
+        python3 tools/url_extractor.py samples/urgent_invoice.eml
+        echo "✓ url_extractor passed"
+
+    - name: Test threat_report_generator.py
+      run: |
+        python3 tools/threat_report_generator.py samples/urgent_invoice.eml
+        echo "✓ threat_report_generator passed"
+
+    - name: Test Sample_002.eml
+      run: |
+        python3 tools/header_analyzer.py samples/Sample_002.eml
+        echo "✓ Sample_002 analysis passed"
+
+    - name: Test Sample_003.eml
+      run: |
+        python3 tools/header_analyzer.py samples/Sample_003.eml
+        echo "✓ Sample_003 analysis passed"
+
+    - name: Verify no API keys in code
+      run: |
+        if grep -r "VT_API_KEY=[a-zA-Z0-9]" tools/ 2>/dev/null; then
+          echo "ERROR: Hardcoded API key found in tools/"
+          exit 1
+        fi
+        echo "✓ No hardcoded API keys found"

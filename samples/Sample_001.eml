@@ -1,0 +1,65 @@
+From: "Amazon Billing" <billing@amaz0n-secure.net>
+To: john.doe@target-company.com
+Subject: URGENT: Invoice #INV-98421 - Payment Overdue
+Date: Tue, 5 May 2026 14:22:33 -0400
+Message-ID: <20260505142233.abc123@mx1.amaz0n-secure.net>
+Return-Path: bounce@amaz0n-secure.net
+Authentication-Results: spf=fail (sender IP: 185.143.223.45); 
+    dkim=fail (signature missing); 
+    dmarc=fail (p=reject)
+Received: from mx1.amaz0n-secure.net (185.143.223.45) 
+    by mail.target-company.com (192.168.1.1) with ESMTP
+Received: from internal-01.amaz0n-secure.net (10.0.0.45) 
+    by mx1.amaz0n-secure.net (8.15.2) with ESMTP
+DKIM-Signature: (NOT PRESENT - SPOOFED)
+Content-Type: multipart/alternative; boundary="BOUNDARY123"
+
+--BOUNDARY123
+Content-Type: text/plain; charset="UTF-8"
+
+Dear Amazon Customer,
+
+Your invoice #INV-98421 for $249.99 is now PAST DUE.
+
+Please click here to view and pay your invoice:
+hxxp://amaz0n-secure.net/billing/verify/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+
+Failure to pay within 24 hours will result in account suspension.
+
+Amazon Billing Department
+
+--BOUNDARY123
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<head><title>Invoice Overdue Notice</title></head>
+<body style="font-family: Arial; color: #333;">
+    <div style="max-width: 600px; margin: 0 auto; border: 1px solid #ddd; padding: 20px;">
+        <img src="https://cdn.amaz0n-secure.net/logo.png" alt="Amazon" width="150">
+        <h2 style="color: #cc0000;">⚠️ Payment Overdue — Action Required</h2>
+        <p>Dear <b>Amazon Customer</b>,</p>
+        <p>Your invoice <b>#INV-98421</b> for <b>$249.99</b> is now <b>PAST DUE</b>.</p>
+        <p>Please verify your billing information immediately to avoid account suspension:</p>
+        <table width="100%" cellpadding="10">
+            <tr>
+                <td align="center">
+                    <a href="http://amaz0n-secure.net/billing/verify/?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" 
+                       style="background-color: #ff9900; color: white; padding: 12px 30px; 
+                              text-decoration: none; border-radius: 4px; font-size: 16px;">
+                        ▶ View & Pay Invoice
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <p style="font-size: 12px; color: #999;">
+            This is an automated billing notice. Do not reply to this email.<br>
+            Amazon.com, 410 Terry Ave N, Seattle, WA 98109
+        </p>
+        <hr>
+        <p style="font-size: 11px; color: #999;">
+            If you have questions, visit <a href="http://help-amaz0n-secure.net/contact">Amazon Help Center</a>
+        </p>
+    </div>
+</body>
+</html>
+--BOUNDARY123--

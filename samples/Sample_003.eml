@@ -1,0 +1,75 @@
+From: "Netflix Billing" <billing@netfl1x-payments.com>
+To: subscriber@target-company.com
+Subject: Your Netflix membership is on hold
+Date: Thu, 7 May 2026 17:33:50 +0000
+Message-ID: <20260507173350.abc000@mx.netfl1x-payments.com>
+Return-Path: bounce@netfl1x-payments.com
+Reply-To: noreply@netfl1x-payments.com
+Authentication-Results: spf=softfail (sender IP: 194.165.16.78);
+    dkim=fail (signature did not verify);
+    dmarc=fail (p=none; header.from=netfl1x-payments.com)
+Received: from mx.netfl1x-payments.com (194.165.16.78)
+    by mail.target-company.com (10.1.1.5) with ESMTP
+Received: from smtp01.netfl1x-payments.com (192.168.10.1)
+    by mx.netfl1x-payments.com (8.15.2) with ESMTP
+Content-Type: multipart/alternative; boundary="NFBOUND789"
+
+--NFBOUND789
+Content-Type: text/plain; charset="UTF-8"
+
+NETFLIX
+
+Your membership is on hold.
+
+We're having some trouble with your current billing information.
+We'll try again, but in the meantime you may want to update your payment details.
+
+Update payment method:
+hxxps://netfl1x-payments.com/account/billing/update/?acct_id=5920184&token=NF2026
+
+If you don't update your payment information within 48 hours,
+your Netflix membership will be cancelled and you'll lose access to all content.
+
+The Netflix Team
+
+--NFBOUND789
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<head><title>Netflix - Membership On Hold</title></head>
+<body style="font-family: Helvetica, Arial; background: #141414; margin: 0; padding: 0;">
+  <div style="max-width: 600px; margin: 0 auto; background: #141414; padding: 30px;">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <img src="https://cdn.netfl1x-payments.com/netflix-logo.png" alt="NETFLIX" width="150">
+    </div>
+    <div style="background: #1f1f1f; padding: 30px; border-radius: 4px;">
+      <h2 style="color: #e50914; text-align: center;">Your membership is on hold</h2>
+      <p style="color: #ffffff; font-size: 15px;">
+        We're having trouble with your current billing information.
+      </p>
+      <p style="color: #999; font-size: 14px;">
+        Your last payment of <strong style="color: #fff;">$15.49</strong> could not be processed.
+        Please update your payment method to continue enjoying Netflix.
+      </p>
+      <div style="text-align: center; margin: 25px 0;">
+        <a href="https://netfl1x-payments.com/account/billing/update/?acct_id=5920184&token=NF2026"
+           style="background: #e50914; color: white; padding: 14px 32px;
+                  text-decoration: none; border-radius: 4px; font-size: 16px; font-weight: bold;">
+          Update Payment Method
+        </a>
+      </div>
+      <p style="color: #666; font-size: 12px; text-align: center;">
+        You'll be redirected to our secure payment portal.<br>
+        Your account will be cancelled if no action is taken within 48 hours.
+      </p>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <p style="color: #666; font-size: 11px;">
+        Questions? Visit <a href="http://help.netfl1x-payments.com" style="color: #999;">Netflix Help Center</a><br>
+        Netflix, 100 Winchester Circle, Los Gatos, CA 95032
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+--NFBOUND789--

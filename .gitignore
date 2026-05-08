@@ -1,0 +1,55 @@
+# ============================================================
+# .gitignore — Phishing Analysis Lab
+# IMPORTANT: .env contains API keys — NEVER commit it
+# ============================================================
+
+# API Keys & Secrets — NEVER COMMIT THESE
+.env
+*.env
+.env.local
+.env.production
+api_keys.txt
+secrets.txt
+
+# Analysis output files (contain real IOC data)
+*_analysis.json
+*_iocs.json
+*_threat_report.json
+*_vt_results.json
+reports/*.json
+reports/*.txt
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env_venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Docker
+*.log
+
+# Do NOT ignore sample .eml files (they are sanitized)
+!samples/*.eml

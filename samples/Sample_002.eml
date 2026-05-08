@@ -1,0 +1,73 @@
+From: "Microsoft 365 Security" <security@micros0ft-alerts.net>
+To: employee@target-company.com
+Subject: [Action Required] Unusual Sign-in Activity on Your Account
+Date: Wed, 6 May 2026 09:14:11 -0500
+Message-ID: <20260506091411.xyz789@mx.micros0ft-alerts.net>
+Return-Path: noreply@micros0ft-alerts.net
+Authentication-Results: spf=fail (sender IP: 91.107.200.33 not authorized);
+    dkim=none (no signature);
+    dmarc=fail (p=reject; header.from=micros0ft-alerts.net)
+Received: from mx.micros0ft-alerts.net (91.107.200.33)
+    by mail.target-company.com (10.1.1.5) with ESMTP
+Received: from relay01.micros0ft-alerts.net (10.0.1.1)
+    by mx.micros0ft-alerts.net (8.14.7) with SMTP
+Content-Type: multipart/alternative; boundary="MSBOUND456"
+
+--MSBOUND456
+Content-Type: text/plain; charset="UTF-8"
+
+Microsoft Account Security Alert
+
+We detected unusual sign-in activity on your Microsoft 365 account.
+
+Sign-in details:
+  Location: Lagos, Nigeria
+  Device:   Unknown Windows Device
+  Time:     2026-05-06 08:44 UTC
+
+If this was you, no action needed.
+
+If this was NOT you, secure your account immediately:
+hxxps://micros0ft-alerts.net/account/secure/?ref=TX992&user=employee@target-company.com
+
+You have 24 hours before your account is suspended.
+
+Microsoft Account Team
+
+--MSBOUND456
+Content-Type: text/html; charset="UTF-8"
+
+<html>
+<head><title>Microsoft Security Alert</title></head>
+<body style="font-family: Segoe UI, Arial; background: #f3f2f1; margin: 0; padding: 20px;">
+  <div style="max-width: 600px; margin: 0 auto; background: white; border-top: 4px solid #0078d4; padding: 30px;">
+    <img src="https://cdn.micros0ft-alerts.net/ms-logo.png" alt="Microsoft" width="120">
+    <h2 style="color: #0078d4;">⚠️ Unusual Sign-in Activity Detected</h2>
+    <p>We detected a sign-in attempt to your Microsoft 365 account from an <strong>unrecognized device</strong>.</p>
+    <table style="width: 100%; background: #f3f2f1; padding: 15px; border-radius: 4px;" cellpadding="8">
+      <tr><td><b>Location:</b></td><td>Lagos, Nigeria</td></tr>
+      <tr><td><b>Device:</b></td><td>Unknown Windows Device</td></tr>
+      <tr><td><b>Time:</b></td><td>2026-05-06 08:44 UTC</td></tr>
+      <tr><td><b>IP Address:</b></td><td>41.203.79.155</td></tr>
+    </table>
+    <br>
+    <p>If this sign-in was <strong>not you</strong>, click below to secure your account:</p>
+    <div style="text-align: center; margin: 20px 0;">
+      <a href="http://micros0ft-alerts.net/account/secure/?ref=TX992&user=employee@target-company.com"
+         style="background: #0078d4; color: white; padding: 12px 28px; text-decoration: none;
+                border-radius: 2px; font-size: 15px;">
+        Review Recent Activity
+      </a>
+    </div>
+    <p style="font-size: 12px; color: #666;">
+      This message was sent from an automated security system.<br>
+      Microsoft Corporation, One Microsoft Way, Redmond, WA 98052
+    </p>
+    <hr style="border: 1px solid #eee;">
+    <p style="font-size: 11px; color: #999;">
+      Need help? <a href="http://support-micros0ft-alerts.net/help">Contact Microsoft Support</a>
+    </p>
+  </div>
+</body>
+</html>
+--MSBOUND456--

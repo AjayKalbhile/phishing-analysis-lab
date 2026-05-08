@@ -1,0 +1,27 @@
+# Phishing Analysis Lab — Python Dependencies
+# Install with: pip3 install -r requirements.txt --break-system-packages
+
+# Core HTTP / networking
+requests>=2.31.0
+dnspython>=2.4.0
+python-whois>=0.8.0
+
+# Email parsing
+mail-parser>=3.15.0
+
+# HTML parsing (for URL extraction from HTML bodies)
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Office document analysis (macro analysis)
+oletools>=0.60.1
+
+# Environment / config
+python-dotenv>=1.0.0
+
+# Output formatting
+colorama>=0.4.6
+tabulate>=0.9.0
+
+# Optional: YARA rule matching
+# yara-python>=4.3.0   # Uncomment if you want YARA scanning
