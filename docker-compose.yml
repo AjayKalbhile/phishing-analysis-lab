@@ -1,0 +1,55 @@
+version: "3.9"
+
+services:
+
+  # ─── Full threat report (default) ───────────────────────────────────────────
+  phishing-lab:
+    build:
+      context: .
+      dockerfile: lab-setup/Dockerfile
+    image: phishing-analysis-lab:latest
+    container_name: phishing-lab
+    env_file: .env                          # VT_API_KEY, OTX_API_KEY, etc.
+    volumes:
+      - ./samples:/app/samples             # mount your .eml files here
+      - ./reports:/app/reports             # generated reports land here
+    command: >
+      python3 tools/threat_report_generator.py
+      --email samples/Sample_001.eml
+      --format json,markdown
+      --output reports/
+    # Override at runtime:
+    #   docker-compose run phishing-lab python3 tools/threat_report_generator.py \
+    #     --email samples/MyEmail.eml --format json,markdown --output reports/
+
+  # ─── Header analysis only ────────────────────────────────────────────────────
+  header-analyzer:
+    image: phishing-analysis-lab:latest
+    container_name: header-analyzer
+    env_file: .env
+    volumes:
+      - ./samples:/app/samples
+      - ./reports:/app/reports
+    command: python3 tools/header_analyzer.py --email samples/Sample_001.eml
+    profiles: ["tools"]                    # run with: docker-compose --profile tools up header-analyzer
+
+  # ─── IOC extraction only ────────────────────────────────────────────────────
+  ioc-parser:
+    image: phishing-analysis-lab:latest
+    container_name: ioc-parser
+    env_file: .env
+    volumes:
+      - ./samples:/app/samples
+      - ./reports:/app/reports
+    command: python3 tools/ioc_parser.py --email samples/Sample_001.eml --format json
+    profiles: ["tools"]
+
+  # ─── VirusTotal lookup ───────────────────────────────────────────────────────
+  vt-lookup:
+    image: phishing-analysis-lab:latest
+    container_name: vt-lookup
+    env_file: .env
+    volumes:
+      - ./reports:/app/reports
+    command: python3 tools/vt_lookup.py --domain "paypal-security.verify-now.com"
+    profiles: ["tools"]
