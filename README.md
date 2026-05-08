@@ -352,7 +352,7 @@ Made with ❤️ for the security community
 
 ⭐ **Star this repo if you found it useful!**
 
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/phishing-analysis-lab?style=social)](https://github.com/yourusername/phishing-analysis-lab)
+[![GitHub stars](https://img.shields.io/github/stars/AjayKalbhile/phishing-analysis-lab?style=social)](https://github.com/AjayKalbhile/phishing-analysis-lab)
 
 <br>
 
