@@ -156,7 +156,7 @@ phishing-analysis-lab/
 ### Step 1 — Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/phishing-analysis-lab.git
+git clone https://github.com/ajaykalbhile/phishing-analysis-lab.git
 cd phishing-analysis-lab
 ```
 
